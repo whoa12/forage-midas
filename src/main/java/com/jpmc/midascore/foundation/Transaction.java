@@ -1,9 +1,11 @@
 package com.jpmc.midascore.foundation;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.Id;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction {
+    @Id
     private long senderId;
     private long recipientId;
     private float amount;
